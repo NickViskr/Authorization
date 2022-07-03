@@ -33,11 +33,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="149.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?"/>
+                                        <connections>
+                                            <action selector="forgotUserName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vbk-iV-Mb9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9W-uq-1y4">
                                         <rect key="frame" x="179.5" y="0.0" width="149.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
+                                        <connections>
+                                            <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L1d-px-ff8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -64,6 +70,10 @@
                             <constraint firstItem="WAf-Vi-qSD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wcr-4N-e3P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="bn4-yH-aYX" id="LnN-S4-9mJ"/>
+                        <outlet property="userName" destination="WAf-Vi-qSD" id="sU9-dV-2l9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
