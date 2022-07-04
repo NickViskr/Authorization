@@ -17,12 +17,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func forgotUserNamePressed() {
-        showAlertName(with: "Your name", and: "Enter your name")
+        showAlertName(with: "Your name?", and: "Enter your name")
         return
     }
     
+    
     @IBAction func forgotPasswordPressed() {
-        showAlertPassword(with: "Enter password", and: "enter the word Password")
+        showAlertPassword(with: "Enter password", and: "Enter the word Password")
         return
     }
     
@@ -32,13 +33,19 @@ class ViewController: UIViewController {
 extension ViewController {
      private func showAlertName(with title: String, and message: String) {
         let alertForgotUN = UIAlertController(title: title, message: message, preferredStyle: .alert)
+         let okAlert = UIAlertAction(title: "Ok", style: .default)
         present(alertForgotUN, animated: true)
+         
+         alertForgotUN.addAction(okAlert)
     }
    
     
     private func showAlertPassword(with title: String, and message: String) {
         let alertForgotPassword = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAlert = UIAlertAction(title: "Ok", style: .default)
         present(alertForgotPassword, animated: true)
+        
+        alertForgotPassword.addAction(okAlert)
     }
 }
 
