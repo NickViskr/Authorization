@@ -19,12 +19,15 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WAf-Vi-qSD">
                                 <rect key="frame" x="52" y="194" width="310" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwT-w6-lEX">
                                 <rect key="frame" x="135" y="392" width="144" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
+                                <connections>
+                                    <segue destination="vtq-y2-0Td" kind="presentation" id="QZm-JK-jtp"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kNH-k0-mB5">
                                 <rect key="frame" x="42.5" y="468" width="329" height="31"/>
@@ -50,7 +53,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bn4-yH-aYX">
                                 <rect key="frame" x="52" y="288" width="310" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -79,25 +82,68 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="wR9-UZ-76L">
             <objects>
-                <viewController id="vtq-y2-0Td" sceneMemberID="viewController">
+                <viewController id="vtq-y2-0Td" customClass="WelcomeViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7b2-aS-S7J">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="gfgfggfg" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpk-Br-Jp7">
+                                <rect key="frame" x="59.5" y="159" width="295" height="34"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fk5-PT-NV4">
+                                <rect key="frame" x="154.5" y="673" width="105" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="exitButtonPress:" destination="vtq-y2-0Td" eventType="touchUpInside" id="n0G-ys-1DH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="🤘" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4b-PI-Rxe">
+                                <rect key="frame" x="135" y="283" width="144" height="129"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <color key="textColor" systemColor="systemMintColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PSu-m7-7tA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="PSu-m7-7tA" firstAttribute="bottom" secondItem="Fk5-PT-NV4" secondAttribute="bottom" constant="130" id="1zS-NO-Hlv"/>
+                            <constraint firstItem="t4b-PI-Rxe" firstAttribute="width" secondItem="7b2-aS-S7J" secondAttribute="height" multiplier="72:421" id="4lt-N0-zVF"/>
+                            <constraint firstItem="qpk-Br-Jp7" firstAttribute="width" secondItem="7b2-aS-S7J" secondAttribute="height" multiplier="295:842" id="68A-ax-hMq"/>
+                            <constraint firstItem="qpk-Br-Jp7" firstAttribute="top" secondItem="PSu-m7-7tA" secondAttribute="top" constant="115" id="84R-hG-T6w"/>
+                            <constraint firstItem="Fk5-PT-NV4" firstAttribute="width" secondItem="7b2-aS-S7J" secondAttribute="height" multiplier="1:8" id="N9K-RF-HnL"/>
+                            <constraint firstItem="t4b-PI-Rxe" firstAttribute="top" secondItem="qpk-Br-Jp7" secondAttribute="bottom" constant="90" id="V9j-mt-Uah"/>
+                            <constraint firstItem="Fk5-PT-NV4" firstAttribute="centerX" secondItem="7b2-aS-S7J" secondAttribute="centerX" id="b4e-hh-8ae"/>
+                            <constraint firstItem="t4b-PI-Rxe" firstAttribute="centerX" secondItem="7b2-aS-S7J" secondAttribute="centerX" id="jwx-F2-eud"/>
+                            <constraint firstItem="qpk-Br-Jp7" firstAttribute="centerX" secondItem="7b2-aS-S7J" secondAttribute="centerX" id="u1U-bz-pXK"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Zay-h4-XHd"/>
+                    <connections>
+                        <outlet property="backButton" destination="Fk5-PT-NV4" id="PAT-DR-ZcA"/>
+                        <outlet property="welcomeField" destination="qpk-Br-Jp7" id="6s5-uu-oKo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSB-4v-N6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="94"/>
+            <point key="canvasLocation" x="824.63768115942037" y="93.75"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

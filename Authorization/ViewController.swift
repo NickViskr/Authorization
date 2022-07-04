@@ -11,10 +11,20 @@ class ViewController: UIViewController {
     @IBOutlet var userName: UITextField!
     @IBOutlet var password: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//    }
+    
+    
+    // Метод для скрытия клавиатуры тапом по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let _ = touches.first {
+            view.endEditing(true)
+        }
+        
     }
+    
 
     @IBAction func forgotUserNamePressed() {
         showAlertName(with: "Your name?", and: "Enter your name")
