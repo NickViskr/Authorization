@@ -18,6 +18,7 @@ class WelcomeViewController: UIViewController {
 
         
     }
+    // нажатие кнопки закрывает вью
     @IBAction func exitButtonPress() {
         dismiss(animated: true)
     }
