@@ -9,9 +9,10 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet var welcomeField: UITextField!
+    @IBOutlet var welcomField: UILabel!
     @IBOutlet var backButton: UIButton!
     
+    var user = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

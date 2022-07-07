@@ -26,6 +26,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
                                 <connections>
+                                    <action selector="logInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPU-Kx-mbD"/>
                                     <segue destination="vtq-y2-0Td" kind="presentation" modalPresentationStyle="fullScreen" id="QZm-JK-jtp"/>
                                 </connections>
                             </button>
@@ -74,8 +75,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="password" destination="bn4-yH-aYX" id="LnN-S4-9mJ"/>
-                        <outlet property="userName" destination="WAf-Vi-qSD" id="sU9-dV-2l9"/>
+                        <outlet property="passwordField" destination="bn4-yH-aYX" id="LnN-S4-9mJ"/>
+                        <outlet property="userNameField" destination="WAf-Vi-qSD" id="sU9-dV-2l9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -96,7 +97,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
-                                    <action selector="exitButtonPress:" destination="vtq-y2-0Td" eventType="touchUpInside" id="n0G-ys-1DH"/>
+                                    <action selector="exitButtonPress" destination="vtq-y2-0Td" eventType="touchUpInside" id="MQv-3K-RCc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNp-En-Too">
@@ -126,7 +127,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zay-h4-XHd"/>
                     <connections>
-                        <outlet property="backButton" destination="Fk5-PT-NV4" id="PAT-DR-ZcA"/>
+                        <outlet property="backButton" destination="Fk5-PT-NV4" id="HVu-AX-aG0"/>
+                        <outlet property="welcomField" destination="yNp-En-Too" id="s5f-8Z-xmC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSB-4v-N6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

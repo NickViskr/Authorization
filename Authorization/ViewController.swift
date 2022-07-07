@@ -8,34 +8,44 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var userName: UITextField!
-    @IBOutlet var password: UITextField!
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//    }
+    @IBOutlet var userNameField: UITextField!
+    @IBOutlet var passwordField: UITextField!
+    
+    private let user = "User"
+    private let password = "Password"
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.user = user
+    }
+    
     
     
     // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let _ = touches.first {
+        super.touchesBegan(touches, with: event)
             view.endEditing(true)
-        }
         
     }
     
-
-    @IBAction func forgotUserNamePressed() {
-        showAlertName(with: "Your name?", and: "Enter your name")
-        return
+    @IBAction func logInPressed() {
+        guard userNameField.text == user, passwordField.text == password else {
+            showa
+        }
     }
     
     
-    @IBAction func forgotPasswordPressed() {
-        showAlertPassword(with: "Enter password", and: "Enter the word Password")
-        return
-    }
+//    @IBAction func forgotUserNamePressed() {
+//        showAlertName(with: "Your name?", and: "Enter \(user)")
+//        return
+//    }
+//
+//
+//    @IBAction func forgotPasswordPressed() {
+//        showAlertPassword(with: "Enter password", and: "Enter the word \(password)")
+//        return
+//    }
     
 }
 
