@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  Authorization
 //
 //  Created by Николай Выскребенцев on 03.07.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     @IBOutlet var userNameField: UITextField!
     @IBOutlet var passwordField: UITextField!
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
 // MARK: - UIAlertController
 
 // сделано криво, три алекрт контроллера не надо делать
-extension ViewController {
+extension LoginViewController {
      private func showAlertName(with title: String, and message: String) {
         let alertForgotUN = UIAlertController(title: title, message: message, preferredStyle: .alert)
          let okAlert = UIAlertAction(title: "Ok", style: .default)

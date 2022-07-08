@@ -15,8 +15,9 @@ class WelcomeViewController: UIViewController {
     var user = ""
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        welcomField.text = "Welcome, \(user)!"
 
+        
         
     }
     // нажатие кнопки закрывает вью
