@@ -31,25 +31,27 @@ class ViewController: UIViewController {
     
     @IBAction func logInPressed() {
         guard userNameField.text == user, passwordField.text == password else {
-            showa
+            showAlert(
+                title: "Invalid login or password",
+                message: "Please, enter correct login and password",
+                textField: passwordField
+            )
+            return
         }
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
-    
-//    @IBAction func forgotUserNamePressed() {
-//        showAlertName(with: "Your name?", and: "Enter \(user)")
-//        return
-//    }
-//
-//
-//    @IBAction func forgotPasswordPressed() {
-//        showAlertPassword(with: "Enter password", and: "Enter the word \(password)")
-//        return
-//    }
+
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        userNameField.text = ""
+        passwordField.text = ""
+    }
     
 }
 
 // MARK: - UIAlertController
+
+// сделано криво, три алекрт контроллера не надо делать
 extension ViewController {
      private func showAlertName(with title: String, and message: String) {
         let alertForgotUN = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -66,6 +68,18 @@ extension ViewController {
         present(alertForgotPassword, animated: true)
         
         alertForgotPassword.addAction(okAlert)
+    }
+    
+    
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) {_ in
+            textField?.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+        
+        
     }
 }
 
