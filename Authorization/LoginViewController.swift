@@ -39,6 +39,13 @@ class LoginViewController: UIViewController {
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
+    @IBAction func forgotUserNameTape() {
+        showAlertName(with: "Forgot your name?", and: "Enter User")
+    }
+    
+    @IBAction func forgotPasswordTape() {
+        showAlertPassword(with: "Forgot your password?", and: "Enter Password")
+    }
 
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         userNameField.text = ""

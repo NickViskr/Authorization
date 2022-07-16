@@ -16,14 +16,13 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         welcomField.text = "Welcome, \(user)!"
-
-        
         
     }
+    
+    
     // нажатие кнопки закрывает вью
     @IBAction func exitButtonPress() {
         dismiss(animated: true)
     }
     
-
 }
