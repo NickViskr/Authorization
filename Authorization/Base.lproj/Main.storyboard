@@ -30,6 +30,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
                                 <connections>
                                     <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="QCy-fC-gJd"/>
+                                    <segue destination="vtq-y2-0Td" kind="presentation" modalPresentationStyle="overFullScreen" id="Poc-oX-bWg"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kNH-k0-mB5">
