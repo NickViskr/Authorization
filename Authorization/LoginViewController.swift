@@ -31,50 +31,26 @@ class LoginViewController: UIViewController {
         guard userNameField.text == user, passwordField.text == password else {
             showAlert(
                 title: "Invalid login or password",
-                message: "Please, enter correct login and password",
+                message: "Enter correct login and password",
                 textField: passwordField
             )
             return
         }
-        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil) // переход по сегвею
     }
     
     @IBAction func forgotUserNameTape() {
-        showAlertName(with: "Forgot your name?", and: "Enter User")
+        showAlert(title: "Forgot your name?", message: "Enter \(user)")
     }
     
     @IBAction func forgotPasswordTape() {
-        showAlertPassword(with: "Forgot your password?", and: "Enter Password")
+        showAlert(title: "Forgot your password?", message: "Enter \(password)")
     }
 
-    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+    @IBAction func backSegwayRide(segue: UIStoryboardSegue) {
         userNameField.text = ""
         passwordField.text = ""
     }
-    
-}
-
-// MARK: - UIAlertController
-
-// сделано криво, три алекрт контроллера не надо делать
-extension LoginViewController {
-     private func showAlertName(with title: String, and message: String) {
-        let alertForgotUN = UIAlertController(title: title, message: message, preferredStyle: .alert)
-         let okAlert = UIAlertAction(title: "Ok", style: .default)
-        present(alertForgotUN, animated: true)
-         
-         alertForgotUN.addAction(okAlert)
-    }
-   
-    
-    private func showAlertPassword(with title: String, and message: String) {
-        let alertForgotPassword = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAlert = UIAlertAction(title: "Ok", style: .default)
-        present(alertForgotPassword, animated: true)
-        
-        alertForgotPassword.addAction(okAlert)
-    }
-    
     
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -84,7 +60,7 @@ extension LoginViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
         
-        
     }
+    
 }
 
