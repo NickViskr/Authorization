@@ -12,7 +12,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var welcomField: UILabel!
     @IBOutlet var backButton: UIButton!
     
-    //let authorizationData = AuthorizationData.authorization()
+//    private let authorizationData = AuthorizationData.firstPassword()
     
     var user = ""
     

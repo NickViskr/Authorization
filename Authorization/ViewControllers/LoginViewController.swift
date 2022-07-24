@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
         welcomeVC.user = user
     }
     
+    
     // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)

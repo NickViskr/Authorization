@@ -5,24 +5,38 @@
 //  Created by Николай Выскребенцев on 23.07.2022.
 //
 
-import Foundation
+//import Foundation
 
 struct AuthorizationData {
-    let user: String
-    let password: String
-    let name: String
+    var user = ""
+    var password = ""
+    var name = ""
     
-    static func authorization() -> [AuthorizationData] {
-        [
-        AuthorizationData(
-            user: "User",
-            password: "Password",
-            name: "God of programming"
-        )
-        ]
-    }
+//    var userPassword = ["User":"Password"]
+//    var userName = ["User":"Nick"]
+    
+
+    
+
+static func firstPassword() -> [AuthorizationData] {
+    [
+    AuthorizationData(
+        user: "User",
+        password: "Password",
+        name: "Nick"
+    )
+    ]
     
 }
+    
+//    firstPassword().user = "User"
+//firstPassword.password = "Password"
+//firstPassword.name = "Nick"
+    
+}
+
+    
+
 
 
 

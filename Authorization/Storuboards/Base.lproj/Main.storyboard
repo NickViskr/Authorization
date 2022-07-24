@@ -77,14 +77,14 @@
                     <connections>
                         <outlet property="passwordField" destination="bn4-yH-aYX" id="LnN-S4-9mJ"/>
                         <outlet property="userNameField" destination="WAf-Vi-qSD" id="sU9-dV-2l9"/>
-                        <segue destination="vtq-y2-0Td" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="hKx-EF-Zyp"/>
+                        <segue destination="Ji0-Ip-XLz" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="hKx-EF-Zyp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Welcom-->
         <scene sceneID="wR9-UZ-76L">
             <objects>
                 <viewController id="vtq-y2-0Td" customClass="WelcomeViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fk5-PT-NV4">
-                                <rect key="frame" x="121.5" y="399" width="77" height="39"/>
+                                <rect key="frame" x="121.5" y="350" width="77" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out"/>
@@ -125,6 +125,7 @@
                             <constraint firstItem="yNp-En-Too" firstAttribute="top" secondItem="PSu-m7-7tA" secondAttribute="top" constant="100" id="olN-Q8-yaq"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Welcom" image="person.fill" catalog="system" id="e9T-7T-Mqq"/>
                     <navigationItem key="navigationItem" id="Zay-h4-XHd"/>
                     <connections>
                         <outlet property="backButton" destination="Fk5-PT-NV4" id="HVu-AX-aG0"/>
@@ -133,10 +134,172 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSB-4v-N6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824.63768115942037" y="93.75"/>
+            <point key="canvasLocation" x="1684" y="93"/>
+        </scene>
+        <!--Work-->
+        <scene sceneID="hPs-J2-glj">
+            <objects>
+                <viewController id="zz5-HV-FhY" customClass="AboutWorkViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5YE-cZ-cg8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8K3-xp-O3G">
+                                <rect key="frame" x="16" y="20" width="288" height="31.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="О">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".SFNS-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="работе">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".SFNS-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7uf-Ea-hmS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8K3-xp-O3G" firstAttribute="top" secondItem="7uf-Ea-hmS" secondAttribute="top" constant="20" id="vh2-L0-ZeU"/>
+                            <constraint firstItem="7uf-Ea-hmS" firstAttribute="trailing" secondItem="8K3-xp-O3G" secondAttribute="trailing" constant="16" id="z1j-Ai-t9G"/>
+                            <constraint firstItem="8K3-xp-O3G" firstAttribute="leading" secondItem="7uf-Ea-hmS" secondAttribute="leading" constant="16" id="zzx-El-cHo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Work" image="person.fill" catalog="system" id="NSZ-Q7-USW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GXZ-xW-j37" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560" y="892"/>
+        </scene>
+        <!--Hobbies-->
+        <scene sceneID="2xu-ue-nMo">
+            <objects>
+                <viewController id="MG7-gP-4RJ" customClass="AboutTheHobbyViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xqT-Ue-WPY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urc-30-31D">
+                                <rect key="frame" x="16" y="20" width="288" height="31.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="О">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".SFNS-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="хобби">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".SFNS-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LfY-3P-c2I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="urc-30-31D" firstAttribute="top" secondItem="LfY-3P-c2I" secondAttribute="top" constant="20" id="Nam-Kf-sVL"/>
+                            <constraint firstItem="LfY-3P-c2I" firstAttribute="trailing" secondItem="urc-30-31D" secondAttribute="trailing" constant="16" id="Odt-YX-Gn6"/>
+                            <constraint firstItem="urc-30-31D" firstAttribute="leading" secondItem="LfY-3P-c2I" secondAttribute="leading" constant="16" id="UDp-B0-SV4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hobbies" image="person.fill" catalog="system" id="EoJ-kG-oHw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ec-x8-oU6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2328.75" y="891.54929577464793"/>
+        </scene>
+        <!--About Me-->
+        <scene sceneID="GWA-hp-6jh">
+            <objects>
+                <viewController id="9Fq-Zm-dgq" customClass="AboutMeViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qwF-0J-KGx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-nH-roJ">
+                                <rect key="frame" x="16" y="20" width="288" height="31.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="О">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".SFNS-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="себе">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".SFNS-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MWq-O9-Wjv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MWq-O9-Wjv" firstAttribute="trailing" secondItem="ehj-nH-roJ" secondAttribute="trailing" constant="16" id="R49-gW-g3W"/>
+                            <constraint firstItem="ehj-nH-roJ" firstAttribute="leading" secondItem="MWq-O9-Wjv" secondAttribute="leading" constant="16" id="Si7-3T-m9f"/>
+                            <constraint firstItem="ehj-nH-roJ" firstAttribute="top" secondItem="MWq-O9-Wjv" secondAttribute="top" constant="20" id="emJ-Ut-F5l"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About Me" image="person.fill" catalog="system" id="Gz9-oR-KH0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSY-pM-oPI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="892"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ItA-Af-mLm">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ji0-Ip-XLz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3WJ-1L-AG1">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vtq-y2-0Td" kind="relationship" relationship="viewControllers" id="Nm5-sB-d3e"/>
+                        <segue destination="9Fq-Zm-dgq" kind="relationship" relationship="viewControllers" id="OE3-gT-fxi"/>
+                        <segue destination="zz5-HV-FhY" kind="relationship" relationship="viewControllers" id="RNp-fa-sCm"/>
+                        <segue destination="MG7-gP-4RJ" kind="relationship" relationship="viewControllers" id="6aH-Pf-3TH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3uI-gR-7ol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823.125" y="92.957746478873247"/>
         </scene>
     </scenes>
     <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
