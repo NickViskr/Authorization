@@ -5,37 +5,34 @@
 //  Created by Николай Выскребенцев on 23.07.2022.
 //
 
-//import Foundation
-
 struct AuthorizationData {
-    var user = ""
-    var password = ""
-    var name = ""
+    let login: String
+    let password: String
+    let name: Person
     
-//    var userPassword = ["User":"Password"]
-//    var userName = ["User":"Nick"]
-    
-
-    
-
-static func firstPassword() -> [AuthorizationData] {
-    [
-    AuthorizationData(
-        user: "User",
-        password: "Password",
-        name: "Nick"
-    )
-    ]
-    
-}
-    
-//    firstPassword().user = "User"
-//firstPassword.password = "Password"
-//firstPassword.name = "Nick"
-    
+    static func enterUserData() -> AuthorizationData {
+        AuthorizationData(
+            login: "User",
+            password: "Password",
+            name: Person.enterPerson()
+        )
+    }
 }
 
+struct Person {
+    let name: String
+    let surname: String
+    let info: String
     
+    static func enterPerson() -> Person {
+        Person(
+            name: "Nick",
+            surname: "Viskrebevtsev",
+            info: "Родился, вырос, женился, бла-бла-бал)))"
+        )
+    }
+    
+}
 
 
 

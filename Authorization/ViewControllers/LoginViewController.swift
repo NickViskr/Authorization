@@ -12,10 +12,37 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
+    private let authorizationData = AuthorizationData.enterUserData()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userNameField.text = authorizationData.login
+        passwordField.text = authorizationData.password
+    }
+    
     private let user = "User" // надо убирать
     private let password = "Password"  // надо убирать
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarController = segue.destination as? UITabBarController else {return}
+        guard let viewControllers = tabBarController.viewControllers else {return}
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = authorizationData.name.name
+            } else if let aboutMeVC = viewController as? AboutMeViewController {
+                aboutMeVC.view.largeContentTitle = authorizationData.name.info
+            }
+        }
+//        viewControllers.forEach {
+//
+//            if let welcomeVC = $0 as? WelcomeViewController {
+//                welcomeVC.user = user
+//            } else if let aboutMeVC = $0 as? AboutMeViewController {
+//                aboutMeVC.
+//}
+//        }
+        
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.user = user
     }

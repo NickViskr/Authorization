@@ -9,6 +9,12 @@ import UIKit
 
 class AboutMeViewController: UIViewController {
     
+    @IBOutlet var aboutMe: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
 }
 
