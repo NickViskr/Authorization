@@ -11,10 +11,13 @@ class AboutMeViewController: UIViewController {
     
     @IBOutlet var aboutMe: UILabel!
     
+   var text = ""
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        aboutMe.text = text
         
     }
     
+    private let authorizationData = AuthorizationData.enterUserData()
 }
 

@@ -16,8 +16,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameField.text = authorizationData.login
-        passwordField.text = authorizationData.password
+        //userNameField.text = authorizationData.login
+        //passwordField.text = authorizationData.password
     }
     
     private let user = "User" // надо убирать
@@ -31,18 +31,14 @@ class LoginViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = authorizationData.name.name
             } else if let aboutMeVC = viewController as? AboutMeViewController {
-                aboutMeVC.view.largeContentTitle = authorizationData.name.info
+                aboutMeVC.text = authorizationData.name.info
+            } else if let aboutWorkVC = viewController as? AboutWorkViewController {
+                aboutWorkVC.textAboutWork = authorizationData.name.info
+            } else if let aboutTheHobbyVC = viewController as? AboutTheHobbyViewController {
+                aboutTheHobbyVC.textAboutTheHobby = authorizationData.name.info
             }
         }
-//        viewControllers.forEach {
-//
-//            if let welcomeVC = $0 as? WelcomeViewController {
-//                welcomeVC.user = user
-//            } else if let aboutMeVC = $0 as? AboutMeViewController {
-//                aboutMeVC.
-//}
-//        }
-        
+
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.user = user
     }

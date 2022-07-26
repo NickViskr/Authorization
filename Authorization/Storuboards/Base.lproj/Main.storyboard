@@ -149,7 +149,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="О">
                                         <attributes>
-                                            <font key="NSFont" size="24" name=".SFNS-Medium"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -161,7 +161,7 @@
                                     </fragment>
                                     <fragment content="работе">
                                         <attributes>
-                                            <font key="NSFont" size="24" name=".SFNS-Medium"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -178,6 +178,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Work" image="person.fill" catalog="system" id="NSZ-Q7-USW"/>
+                    <connections>
+                        <outlet property="aboutWork" destination="8K3-xp-O3G" id="aMh-yv-d63"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXZ-xW-j37" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,7 +199,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="О">
                                         <attributes>
-                                            <font key="NSFont" size="24" name=".SFNS-Medium"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -208,7 +211,7 @@
                                     </fragment>
                                     <fragment content="хобби">
                                         <attributes>
-                                            <font key="NSFont" size="24" name=".SFNS-Medium"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -225,6 +228,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hobbies" image="person.fill" catalog="system" id="EoJ-kG-oHw"/>
+                    <connections>
+                        <outlet property="aboutTheHobby" destination="urc-30-31D" id="vWm-Zw-gkO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ec-x8-oU6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,25 +244,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-nH-roJ">
-                                <rect key="frame" x="16" y="20" width="288" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-nH-roJ">
+                                <rect key="frame" x="16" y="20" width="288" height="463"/>
                                 <attributedString key="attributedText">
                                     <fragment content="О">
                                         <attributes>
-                                            <font key="NSFont" size="24" name=".SFNS-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" ">
                                         <attributes>
                                             <font key="NSFont" size="24" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="себе">
                                         <attributes>
-                                            <font key="NSFont" size="24" name=".SFNS-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -266,12 +272,16 @@
                         <viewLayoutGuide key="safeArea" id="MWq-O9-Wjv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MWq-O9-Wjv" firstAttribute="bottom" secondItem="ehj-nH-roJ" secondAttribute="bottom" constant="36" id="DjQ-Kx-a4y"/>
                             <constraint firstItem="MWq-O9-Wjv" firstAttribute="trailing" secondItem="ehj-nH-roJ" secondAttribute="trailing" constant="16" id="R49-gW-g3W"/>
                             <constraint firstItem="ehj-nH-roJ" firstAttribute="leading" secondItem="MWq-O9-Wjv" secondAttribute="leading" constant="16" id="Si7-3T-m9f"/>
                             <constraint firstItem="ehj-nH-roJ" firstAttribute="top" secondItem="MWq-O9-Wjv" secondAttribute="top" constant="20" id="emJ-Ut-F5l"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About Me" image="person.fill" catalog="system" id="Gz9-oR-KH0"/>
+                    <connections>
+                        <outlet property="aboutMe" destination="ehj-nH-roJ" id="EPX-Mz-TDK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSY-pM-oPI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -283,6 +293,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ji0-Ip-XLz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3WJ-1L-AG1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
