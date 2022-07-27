@@ -9,15 +9,15 @@ import UIKit
 
 class AboutMeViewController: UIViewController {
     
-    @IBOutlet var aboutMe: UILabel!
-    
-   var text = ""
+
+    @IBOutlet var aboutMe: UITextView!
+    var text = ""
     
     override func viewDidLoad() {
+        aboutMe.backgroundColor = .clear
+        aboutMe.textColor = .black
         aboutMe.text = text
         
     }
-    
-    private let authorizationData = AuthorizationData.enterUserData()
 }
 

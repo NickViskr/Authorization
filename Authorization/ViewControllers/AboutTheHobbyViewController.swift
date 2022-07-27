@@ -9,14 +9,11 @@ import UIKit
 
 class AboutTheHobbyViewController: UIViewController {
     
-    @IBOutlet var aboutTheHobby: UILabel!
-    
+    @IBOutlet var aboutTheHobby: UITextView!
     var textAboutTheHobby = ""
     
     override func viewDidLoad() {
         aboutTheHobby.text = textAboutTheHobby
     }
-    
-    private let authorizationData = AuthorizationData.enterUserData()
     
 }

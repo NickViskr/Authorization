@@ -11,16 +11,12 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet var welcomField: UILabel!
     @IBOutlet var backButton: UIButton!
-    
-//    private let authorizationData = AuthorizationData.firstPassword()
-    
     var user = ""
     
     override func viewDidLoad() {
         welcomField.text = "Welcome, \(user)!"
         
     }
-    
     
     // нажатие кнопки закрывает вью
     @IBAction func exitButtonPress() {

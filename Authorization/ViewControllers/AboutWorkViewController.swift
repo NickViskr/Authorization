@@ -9,14 +9,10 @@ import UIKit
 
 class AboutWorkViewController: UIViewController {
     
-    @IBOutlet var aboutWork: UILabel!
-    
+    @IBOutlet var aboutWork: UITextView!
     var textAboutWork = ""
     
     override func viewDidLoad() {
         aboutWork.text = textAboutWork
     }
-    
-    private let authorizationData = AuthorizationData.enterUserData()
-    
 }

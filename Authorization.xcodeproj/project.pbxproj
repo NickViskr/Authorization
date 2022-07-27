@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E76AF02288C6E0F00241786 /* DataToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E76AF01288C6E0F00241786 /* DataToDisplay.swift */; };
+		7EB6FF5A2891A006005C55B1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB6FF592891A006005C55B1 /* TabBarController.swift */; };
 		7EC4533228720BA4007AD097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC4533128720BA4007AD097 /* AppDelegate.swift */; };
 		7EC4533428720BA4007AD097 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC4533328720BA4007AD097 /* SceneDelegate.swift */; };
 		7EC4533628720BA4007AD097 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC4533528720BA4007AD097 /* LoginViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		7E76AF01288C6E0F00241786 /* DataToDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataToDisplay.swift; sourceTree = "<group>"; };
+		7EB6FF592891A006005C55B1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7EC4532E28720BA4007AD097 /* Authorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authorization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC4533128720BA4007AD097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC4533328720BA4007AD097 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				7EC4533528720BA4007AD097 /* LoginViewController.swift */,
+				7EB6FF592891A006005C55B1 /* TabBarController.swift */,
 				7EC45345287367DC007AD097 /* WelcomeViewController.swift */,
 				7EC933C1288DBAF90003DD57 /* AboutMeViewController.swift */,
 				7EC933C3288DBBFD0003DD57 /* AboutWorkViewController.swift */,
@@ -196,6 +199,7 @@
 				7EC4533628720BA4007AD097 /* LoginViewController.swift in Sources */,
 				7EC933C6288DBCCE0003DD57 /* AboutTheHobbyViewController.swift in Sources */,
 				7EC933C4288DBBFD0003DD57 /* AboutWorkViewController.swift in Sources */,
+				7EB6FF5A2891A006005C55B1 /* TabBarController.swift in Sources */,
 				7EC45346287367DD007AD097 /* WelcomeViewController.swift in Sources */,
 				7EC4533228720BA4007AD097 /* AppDelegate.swift in Sources */,
 				7EC4533428720BA4007AD097 /* SceneDelegate.swift in Sources */,

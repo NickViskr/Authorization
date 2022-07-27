@@ -12,12 +12,12 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
-    private let authorizationData = AuthorizationData.enterUserData()
+    private let authorizationDataUser = AuthorizationData.enterUserData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //userNameField.text = authorizationData.login
-        //passwordField.text = authorizationData.password
+        userNameField.text = authorizationDataUser.login
+        passwordField.text = authorizationDataUser.password
     }
     
     private let user = "User" // надо убирать
@@ -29,18 +29,15 @@ class LoginViewController: UIViewController {
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.user = authorizationData.name.name
+                welcomeVC.user = authorizationDataUser.name.name
             } else if let aboutMeVC = viewController as? AboutMeViewController {
-                aboutMeVC.text = authorizationData.name.info
+                aboutMeVC.text = authorizationDataUser.name.info
             } else if let aboutWorkVC = viewController as? AboutWorkViewController {
-                aboutWorkVC.textAboutWork = authorizationData.name.info
+                aboutWorkVC.textAboutWork = authorizationDataUser.name.work
             } else if let aboutTheHobbyVC = viewController as? AboutTheHobbyViewController {
-                aboutTheHobbyVC.textAboutTheHobby = authorizationData.name.info
+                aboutTheHobbyVC.textAboutTheHobby = authorizationDataUser.name.theHobby
             }
         }
-
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user
     }
     
     
@@ -52,7 +49,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInPressed() {
-        guard userNameField.text == user, passwordField.text == password else {
+        guard userNameField.text == authorizationDataUser.login, passwordField.text == authorizationDataUser.password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Enter correct login and password",
