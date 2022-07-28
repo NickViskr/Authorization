@@ -20,8 +20,8 @@ class LoginViewController: UIViewController {
         passwordField.text = authorizationDataUser.password
     }
     
-    private let user = "User" // надо убирать
-    private let password = "Password"  // надо убирать
+    private let user = "User"
+    private let password = "Password"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else {return}
@@ -39,7 +39,6 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
     
     // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

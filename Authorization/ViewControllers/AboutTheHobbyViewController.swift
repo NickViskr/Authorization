@@ -13,6 +13,9 @@ class AboutTheHobbyViewController: UIViewController {
     var textAboutTheHobby = ""
     
     override func viewDidLoad() {
+        view.addVerticalGradientLayer()
+        aboutTheHobby.backgroundColor = .clear
+        aboutTheHobby.textColor = .black
         aboutTheHobby.text = textAboutTheHobby
     }
     

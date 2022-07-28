@@ -13,6 +13,9 @@ class AboutWorkViewController: UIViewController {
     var textAboutWork = ""
     
     override func viewDidLoad() {
+        view.addVerticalGradientLayer()
+        aboutWork.backgroundColor = .clear
+        aboutWork.textColor = .black
         aboutWork.text = textAboutWork
     }
 }

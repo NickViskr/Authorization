@@ -14,7 +14,9 @@ class WelcomeViewController: UIViewController {
     var user = ""
     
     override func viewDidLoad() {
+        view.addVerticalGradientLayer()
         welcomField.text = "Welcome, \(user)!"
+        
         
     }
     
