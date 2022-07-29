@@ -16,7 +16,6 @@ class AboutMeViewController: UIViewController {
     
     @IBOutlet var aboutMe: UITextView!
     private let authorizationDataUser = AuthorizationData.enterUserData()
-    
     var text = ""
     
     override func viewDidLoad() {
@@ -25,7 +24,6 @@ class AboutMeViewController: UIViewController {
         aboutMe.backgroundColor = .clear
         aboutMe.textColor = .black
         aboutMe.text = text
-        
     }
 }
 

@@ -13,13 +13,6 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordField: UITextField!
     
     private let authorizationDataUser = AuthorizationData.enterUserData()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        userNameField.text = authorizationDataUser.login
-        passwordField.text = authorizationDataUser.password
-    }
-    
     private let user = "User"
     private let password = "Password"
     
@@ -44,7 +37,6 @@ class LoginViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
             view.endEditing(true)
-        
     }
     
     @IBAction func logInPressed() {
@@ -79,8 +71,6 @@ class LoginViewController: UIViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
-        
     }
-    
 }
 
