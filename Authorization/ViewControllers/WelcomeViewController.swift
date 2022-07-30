@@ -11,11 +11,11 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet var welcomField: UILabel!
     @IBOutlet var backButton: UIButton!
-    var user = ""
+    var user: AuthorizationData!
     
     override func viewDidLoad() {
         view.addVerticalGradientLayer()
-        welcomField.text = "Welcome, \(user)!"
+        welcomField.text = "Welcome, \(user.name.name)!"
     }
     
     // нажатие кнопки закрывает вью

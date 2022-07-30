@@ -13,8 +13,6 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordField: UITextField!
     
     private let authorizationDataUser = AuthorizationData.enterUserData()
-    private let user = "User"
-    private let password = "Password"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else {return}
@@ -22,13 +20,13 @@ class LoginViewController: UIViewController {
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.user = authorizationDataUser.name.name
+                welcomeVC.user = authorizationDataUser
             } else if let aboutMeVC = viewController as? AboutMeViewController {
-                aboutMeVC.text = authorizationDataUser.name.info
+                aboutMeVC.biography = authorizationDataUser
             } else if let aboutWorkVC = viewController as? AboutWorkViewController {
-                aboutWorkVC.textAboutWork = authorizationDataUser.name.work
+                aboutWorkVC.textAboutWork = authorizationDataUser
             } else if let aboutTheHobbyVC = viewController as? AboutTheHobbyViewController {
-                aboutTheHobbyVC.textAboutTheHobby = authorizationDataUser.name.theHobby
+                aboutTheHobbyVC.textAboutTheHobby = authorizationDataUser
             }
         }
     }
@@ -52,11 +50,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameTape() {
-        showAlert(title: "Forgot your name?", message: "Enter \(user)")
+        showAlert(title: "Forgot your name?", message: "Enter \(authorizationDataUser.login)")
     }
     
     @IBAction func forgotPasswordTape() {
-        showAlert(title: "Forgot your password?", message: "Enter \(password)")
+        showAlert(title: "Forgot your password?", message: "Enter \(authorizationDataUser.password)")
     }
 
     @IBAction func backSegwayRide(segue: UIStoryboardSegue) {

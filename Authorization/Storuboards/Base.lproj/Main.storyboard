@@ -101,6 +101,7 @@
                                 </state>
                                 <connections>
                                     <action selector="exitButtonPress" destination="vtq-y2-0Td" eventType="touchUpInside" id="MQv-3K-RCc"/>
+                                    <segue destination="RnB-KG-diS" kind="unwind" unwindAction="backSegwayRideWithSegue:" id="r65-JC-q3u"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNp-En-Too">
@@ -135,6 +136,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSB-4v-N6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="RnB-KG-diS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1684" y="93"/>
         </scene>
@@ -224,7 +226,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stive" translatesAutoresizingMaskIntoConstraints="NO" id="BSx-IH-iXm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stive" translatesAutoresizingMaskIntoConstraints="NO" id="BSx-IH-iXm">
                                 <rect key="frame" x="40" y="329" width="240" height="128"/>
                             </imageView>
                         </subviews>
@@ -254,7 +256,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ItA-Af-mLm">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ji0-Ip-XLz" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ji0-Ip-XLz" customClass="TabBarController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3WJ-1L-AG1">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -274,7 +276,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Stive" width="180" height="180"/>
+        <image name="Stive" width="350" height="387"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -10,13 +10,13 @@ import UIKit
 class AboutTheHobbyViewController: UIViewController {
     
     @IBOutlet var aboutTheHobby: UITextView!
-    var textAboutTheHobby = ""
+    var textAboutTheHobby: AuthorizationData!
     
     override func viewDidLoad() {
         view.addVerticalGradientLayer()
         aboutTheHobby.backgroundColor = .clear
         aboutTheHobby.textColor = .black
-        aboutTheHobby.text = textAboutTheHobby
+        aboutTheHobby.text = textAboutTheHobby.name.theHobby
     }
     
 }

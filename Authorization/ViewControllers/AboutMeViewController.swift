@@ -10,20 +10,19 @@ import UIKit
 class AboutMeViewController: UIViewController {
     
     @IBOutlet var photo: UIImageView! {
-        didSet { photo.layer.cornerRadius = photo.frame.height / 2
+        didSet {photo.layer.cornerRadius = photo.frame.height / 2
         }
     }
     
     @IBOutlet var aboutMe: UITextView!
-    private let authorizationDataUser = AuthorizationData.enterUserData()
-    var text = ""
+    var biography: AuthorizationData!
     
     override func viewDidLoad() {
         view.addVerticalGradientLayer()
-        photo.image = UIImage(named: authorizationDataUser.name.photo)
+        photo.image = UIImage(named: biography.name.photo)
         aboutMe.backgroundColor = .clear
         aboutMe.textColor = .black
-        aboutMe.text = text
+        aboutMe.text = biography.name.info
     }
 }
 

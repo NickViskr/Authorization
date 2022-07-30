@@ -10,12 +10,12 @@ import UIKit
 class AboutWorkViewController: UIViewController {
     
     @IBOutlet var aboutWork: UITextView!
-    var textAboutWork = ""
+    var textAboutWork: AuthorizationData!
     
     override func viewDidLoad() {
         view.addVerticalGradientLayer()
         aboutWork.backgroundColor = .clear
         aboutWork.textColor = .black
-        aboutWork.text = textAboutWork
+        aboutWork.text = textAboutWork.name.work
     }
 }
